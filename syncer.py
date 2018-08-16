@@ -38,8 +38,8 @@ class Syncer(object):
             cmd += " -f Makefile.lb"
         rc, out = cls._run_cmd(cmd)
         if rc != 0:
-            global err_dict
-            err_dict[name] = out
+            cls.err_dict[name] = out
+        print("*** Done building %s" % name)
 
     @classmethod
     def _is_build_needed(cls):
