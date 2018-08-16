@@ -121,7 +121,7 @@ class Syncer(object):
                           action="store",
                           dest="build_rootfs",
                           default=None,
-                          help="Build and checking given rootfs")
+                          help="Build and checking given rootfs: %s" % ", ".join(cls.rootfs_list))
         (cls.options, args) = parser.parse_args()
 
 
